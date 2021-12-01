@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1040px;
+  margin: 0;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+}
+
+.header,
+.tools {
+  display: flex;
+  align-items: center;
+}
+
+.header__title {
+  font-size: 24px;
+}
+
+.header__title.name {
+  margin-top: 24px;
+}
+
+.header__title.tools {
+  margin-bottom: 10px;
+}
+
+.job {
+  margin: 0;
+}
+
+.tools {
+  margin: 0;
+}
+
+.tool {
+  background-color: lightgrey;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 28px;
+}
+
+.description::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 20px 0px;
+  background-color: lightgrey;
+}
+
+.projects::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: lightgrey;
+}
+
+.project {
+  display: flex;
+  flex: 1 1 50%;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.project__list {
+  display: flex;
+  transition: all 0.2s ease-in;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.project__list:hover {
+  transform: translateY(1.02);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.project__box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5em 1.2em;
+  min-width: 500px;
+}
+
+.project__title {
+  flex-basis: 60%;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+}
