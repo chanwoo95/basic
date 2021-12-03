@@ -1,9 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap");
+:root {
+  /* colors */
+
+  --color-lightgrey: #f7f7f7;
+}
+
 * {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-lightgrey);
 }
 
 ul {
-  padding: 0;
+  padding-left: 0;
 }
 
 li {
@@ -16,8 +30,6 @@ li {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
   max-width: 1040px;
   margin: 0;
 }
@@ -25,6 +37,11 @@ li {
 .avatar {
   width: 200px;
   height: 200px;
+}
+
+.intro,
+.projects {
+  padding: 16px;
 }
 
 .header,
@@ -39,9 +56,11 @@ li {
 
 .header__title.name {
   margin-top: 24px;
+  margin-bottom: 0px;
 }
 
 .header__title.tools {
+  margin-top: 28px;
   margin-bottom: 10px;
 }
 
@@ -62,6 +81,7 @@ li {
 
 .title {
   font-size: 28px;
+  margin-bottom: 20px;
 }
 
 .description::after {
@@ -81,18 +101,24 @@ li {
   background-color: lightgrey;
 }
 
+.intro,
+.projects {
+  padding: 16px;
+}
+
 .project {
   display: flex;
-  flex: 1 1 50%;
   flex-wrap: wrap;
-  margin: 0;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .project__list {
   display: flex;
   transition: all 0.2s ease-in;
   border-radius: 10px;
-  margin: 5px;
+  width: 50%;
 }
 
 .project__list:hover {
@@ -104,16 +130,69 @@ li {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 1.4em 1.2em;
   text-decoration: none;
-  padding: 0.5em 1.2em;
-  min-width: 500px;
+  min-width: 480px;
+  color: #666;
+}
+
+.project__number {
+  margin-right: 32px;
 }
 
 .project__title {
   flex-basis: 60%;
+  font-size: 17px;
 }
 
 .footer {
   padding: 20px;
   text-align: center;
+}
+
+@media screen and (max-width: 760px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__title.name,
+  .job,
+  .header__title.tools {
+    text-align: center;
+  }
+
+  .header__title.tools {
+    display: flex;
+    justify-content: center;
+  }
+
+  .project {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .project__list {
+    width: 90%;
+    margin: 10px 0px;
+  }
+
+  .description {
+    margin-top: 20px;
+  }
+
+  .title {
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+
+  .intro,
+  .projects {
+    padding: 0px 20px;
+  }
+  .project__box {
+    min-width: 100%;
+  }
 }
