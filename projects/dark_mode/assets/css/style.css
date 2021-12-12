@@ -1,32 +1,62 @@
 * {
-  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
-  width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f95959;
+  height: 100vh;
+  background-color: #ff3838;
 }
 
-.box,
-.box2 {
+li {
+  list-style: none;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.cards {
   max-width: 80%;
-  background-color: white;
-  border-radius: 10px;
-  padding: 10px 15px;
-  margin-bottom: 20px;
 }
 
-.box,
-.box2,
-.starAndScore {
+.card {
   display: flex;
   align-items: center;
+  padding: 12px 30px 12px 20px;
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 0.7em 1.1rem;
+  border-radius: 20px;
+  background-color: #fff;
+  margin-bottom: 1.2em;
+}
+
+.card--top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card--rating {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.star {
+  width: 13px;
+  height: 13px;
+  margin-right: 2px;
+}
+
+.card--desc {
+  color: black;
+  font-size: 1.37rem;
 }
 
 .avatar {
@@ -34,52 +64,39 @@
   height: 100px;
 }
 
-.info {
-  padding: 10px;
+.read--only {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }
 
-.title {
-  color: white;
-  font-size: 2.1rem;
-}
-
-.nameAndStar {
-  display: flex;
-  justify-content: space-between;
-}
-
-.name {
-  font-size: 28px;
-}
-
-.star {
-  width: 15px;
-  height: 15px;
-}
-
-.score {
-  font-size: 20px;
-  margin-left: 5px;
-}
-
-.description {
-  padding: 10px 0px;
-}
-
-.button {
-  padding: 10px 20px;
-  border-radius: 20px;
+#mode--btn {
+  margin: 1em 0;
+  padding: 0.7em 1.1rem;
+  font-size: 1.2rem;
   outline: 0;
-  border: none;
+  border: 0;
+  border-radius: 20px;
   cursor: pointer;
-  transition: all 0.2s;
-  background-color: black;
-  color: white;
+  transition: box-shadow 300ms linear;
 }
 
-.button:hover {
-  opacity: 0.8;
+#mode--btn:hover,
+#mode--btn:focus {
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.2);
 }
 
 @media screen and (max-width: 760px) {
+  .card {
+    max-width: 18.75em;
+  }
+
+  .avatar {
+    width: 5em;
+    height: 5em;
+  }
+
+  .card--desc {
+    font-size: 0.75rem;
+  }
 }
