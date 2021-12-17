@@ -3,46 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dark mode</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark_mode.css">
     <script src="assets/js/main.js" defer></script>
+  </head>
   <body>
     <section class="container">
       <h2 class="title">Dark mode</h2>
-      <div class="box">
-        <img class="avatar" src="assets/img/user_img1.png" alt="avatar" />
-        <div class="info">
-          <div class="nameAndStar">
-            <strong class="name">Mike</strong>
-            <div class="starAndScore">
-              <img class="star" src="assets/img/star.png" alt="star" />
-              <p class="score">4.3</p>
-            </div>
+      <ul class="cards">
+        <li class="card">
+          <img src="assets/img/user_img1.png" class="avatar" alt="user-img" />
+          <div class="card__message">
+            <dl class="card--content">
+                <div class="card--top">
+                    <dt class="read--only">name</dt>
+                    <dd class="card--name">
+                        <strong>Mike</strong>
+                    </dd>
+                    <dt class="read--only">card rating</dt>
+                    <dd class="card--rating">
+                        <img class="star" src="assets/img/star.png" alt="star">
+                        <strong>4.3</strong>
+                    </dd>
+                </div>
+              <dt class="read--only">description</dt>
+              <dd class=card--desc">
+                <p class="desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit
+                    pulvinar sit sollicitudin velit id nisl quam.
+                </p>
+              </dd>
+            </dl>
           </div>
-          <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit
-            pulvinar sit sollicitudin velit id nisl quam.
-          </p>
-        </div>
-      </div>
-      <div class="box2">
-        <img class="avatar" src="assets/img/user_img.png" alt="avatar" />
-        <div class="info">
-          <div class="nameAndStar">
-            <strong class="name">Chris</strong>
-            <div class="starAndScore">
-              <img class="star" src="assets/img/star.png" alt="star" />
-              <p class="score">5</p>
-            </div>
+        </li>
+        <li class="card">
+          <img src="assets/img/user_img.png" class="avatar" alt="user-img" />
+          <div class="card__message">
+            <dl class="card--content">
+                <div class="card--top">
+                    <dt class="read--only">name</dt>
+                    <dd class="card--name">
+                        <strong>Chris</strong>
+                    </dd>
+                    <dt class="read--only">card rating</dt>
+                    <dd class="card--rating">
+                        <img class="star" src="assets/img/star.png" alt="star">
+                        <strong>5</strong>
+                    </dd>
+                </div>
+              <dt class="read--only">description</dt>
+              <dd class=card--desc">
+                 <p class="desc">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit
+                    pulvinar sit sollicitudin velit id nisl quam.
+                </p>
+              </dd>
+            </dl>
           </div>
-          <p class="description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit
-            pulvinar sit sollicitudin velit id nisl quam.
-          </p>
-        </div>
-      </div>
-      <button class="button">Dark On</button>
+        </li>
+      </ul>
+      <button id="mode--btn">Dark</button>
     </section>
   </body>
 </html>
