@@ -1,11 +1,14 @@
 .container.dark {
-  background-color: #323643;
+  background-color: black;
 }
 
-.box.dark {
-  background-color: #606470;
+.container.dark .title,
+.container.dark .card--name,
+.container.dark .card--rating,
+.container.dark .desc {
+  color: white;
 }
 
-.box2.dark {
-  background-color: #606470;
+.container.dark .card {
+  background-color: #1d1d1d;
 }
