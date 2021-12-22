@@ -46,6 +46,10 @@ li {
   justify-content: space-between;
 }
 
+.card--name {
+  font-size: 1.3rem;
+}
+
 .card--rating {
   display: flex;
   align-items: center;
