@@ -37,6 +37,10 @@ li {
   margin-bottom: 1.2em;
 }
 
+.card__message {
+  width: 500px;
+}
+
 .card--top {
   display: flex;
   justify-content: space-between;
