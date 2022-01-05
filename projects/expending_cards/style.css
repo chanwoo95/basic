@@ -1,0 +1,47 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 90vw;
+}
+
+.card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-size: no-repeat;
+  height: 80vh;
+  border-radius: 40px;
+  flex: 0.5;
+  margin: 0.5em;
+  cursor: pointer;
+  transition: all 700ms ease-in;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  color: #fff;
+  position: absolute;
+  bottom: 0.8em;
+  left: 0.8em;
+  margin: 0;
+  opacity: 0;
+}
+.card.active {
+  flex: 5;
+}
+
+.card.active h2 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
