@@ -51,6 +51,7 @@ const getTime = () => {
   let hoursForClock = hours >= 13 ? hours % 12 : hours;
   let month = time.getMonth();
   let day = time.getDay();
+  let date = time.getDate();
   let minutes = time.getMinutes();
   let seconds = time.getSeconds();
   const ampm = hours < 12 ? "AM" : "PM";
@@ -60,7 +61,7 @@ const getTime = () => {
   seconds = seconds < 10 ? `0${seconds}` : seconds;
 
   timeEl.textContent = `${hoursForClock}:${minutes} ${ampm}`;
-  dateEl.textContent = `${days[day]}, ${months[month]}, ${day}`;
+  dateEl.textContent = `${days[day]}, ${months[month]}, ${date}`;
 
   document.querySelector(".hours").textContent = hours;
   document.querySelector(".minutes").textContent = minutes;
