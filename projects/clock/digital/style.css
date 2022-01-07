@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.analog,
+.digital {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.analog {
+  border-right: 1px solid #000;
+}
+
+.digital {
+  background-color: #363636;
+  color: #eaf6f6;
+}
+
+.dg--clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.digital h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.2em;
+}
+
+.dg--clock h2 {
+  margin-top: 0.5em;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.dg--clock strong {
+  display: block;
+  font-size: 2.4rem;
+  padding: 1.6rem;
+  border-radius: 10px;
+  box-shadow: 2px 2px 8px #000, -3px -5px 3px #000;
+}
+
+.box:not(last-child) {
+  margin-right: 1.2em;
+}
+
+@media screen and (max-width: 970px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .analog {
+    border-right: transparent;
+    border-bottom: 1px solid #000;
+    width: 100%;
+  }
+
+  .digital {
+    width: 100%;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .digital {
+    margin: auto;
+    padding: 1.2em;
+  }
+}
