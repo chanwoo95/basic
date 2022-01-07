@@ -1,0 +1,80 @@
+.analog {
+  background-color: #d9dad7;
+  padding: 2.5em 0;
+}
+
+.analog h1 {
+  font-size: 2.8rem;
+}
+
+.ag--clock {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  margin-top: 1.5em;
+  border: 3px solid black;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.time {
+  margin-top: 0.5em;
+  font-size: 2.5rem;
+}
+
+.date {
+  font-size: 1.4rem;
+  color: #393e46;
+}
+
+.point {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.7rem;
+  height: 0.7rem;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: red;
+  z-index: 100;
+}
+
+.needle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  border-radius: 10px;
+  transform-origin: 100%;
+  transition: all 0.2s;
+}
+
+.needle.hour {
+  top: 25%;
+  left: 48.5%;
+  width: 2.5%;
+  height: 25%;
+  transform-origin: 50% 100%;
+  border-radius: 20px;
+  background-color: #1a2639;
+}
+
+.needle.minute {
+  top: 11%;
+  left: 50%;
+  width: 2%;
+  height: 38%;
+  transform-origin: 50% 100%;
+  background-color: #24527a;
+}
+
+.needle.second {
+  top: 11%;
+  left: 49%;
+  width: 1.7%;
+  height: 48%;
+  transform-origin: 50% 80%;
+  border-radius: 20px;
+  background-color: red;
+}
