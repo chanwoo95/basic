@@ -10,6 +10,7 @@
 .container {
   display: flex;
   width: 100%;
+  overflow: hidden;
 }
 
 .analog,
@@ -57,7 +58,7 @@
 }
 
 .box:not(last-child) {
-  margin-right: 1.2em;
+  margin: 0.4em;
 }
 
 @media screen and (max-width: 970px) {
@@ -83,4 +84,30 @@
     margin: auto;
     padding: 1.2em;
   }
+}
+
+@media screen and (max-width: 480px) {
+  .analog,
+  .digital {
+    padding: 0;
+  }
+
+  .box {
+    margin-bottom: 1.2em;
+  }
+
+  .dg--clock strong {
+    font-size: 1.6rem;
+    padding: 1.2rem;
+  }
+
+  .dg--clock h2 {
+    font-size: 0.8rem;
+  }
+
+  /* .dg--clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
 }
