@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <link rel="stylesheet" href="analog/style.css" />
+    <link rel="stylesheet" href="digital/style.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <section class="container">
+      <div class="analog">
+        <h1>Analog Clock</h1>
+        <div class="ag--clock">
+          <div class="needle hour"></div>
+          <div class="needle minute"></div>
+          <div class="needle second"></div>
+          <div class="point"></div>
+        </div>
+        <div class="time"></div>
+        <div class="date"></div>
+      </div>
+
+      <div class="digital">
+        <h1>Digital Clock</h1>
+        <div class="dg--clock">
+          <div class="box">
+            <strong class="hours"></strong>
+            <h2>Hours</h2>
+          </div>
+          <div class="box">
+            <strong class="minutes"></strong>
+            <h2>Minutes</h2>
+          </div>
+          <div class="box">
+            <strong class="seconds"></strong>
+            <h2>Seconds</h2>
+          </div>
+          <div class="box">
+            <strong class="ampm"></strong>
+            <h2>AM/PM</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
