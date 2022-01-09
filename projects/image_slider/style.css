@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  color: white;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fafafa;
+}
+
+.container {
+  position: relative;
+  width: 500px;
+  height: 600px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 25px;
+}
+
+.cards {
+  display: flex;
+  transform: translateX(0);
+  transition: all 0.5s ease-in-out;
+}
+
+.cards .img {
+  width: 500px;
+  height: 600px;
+  object-fit: cover;
+}
+
+.left--button,
+.right--button {
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.left--button:hover,
+.right--button:hover {
+  opacity: 1;
+}
+
+.buttons .left--button {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  font-size: 2.3rem;
+}
+
+.buttons .right--button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 2.3rem;
+}
+
+@media screen and (max-width: 760px) {
+  .container {
+    width: 300px;
+    height: 400px;
+  }
+}
