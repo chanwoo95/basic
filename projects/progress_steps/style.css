@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #ececec;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5em 2.4em;
+}
+
+button:disabled {
+  background-color: #e0e0e0;
+  cursor: not-allowed;
+}
+
+button:active {
+  transform: scale(1.12);
+}
+
+.container {
+  position: relative;
+}
+
+.steps::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: lightgrey;
+  z-index: -1;
+}
+.progress--bar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  background-color: black;
+  height: 4px;
+  width: 0%;
+  z-index: -1;
+  transition: all 0.3s ease-in;
+}
+
+.steps {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.2rem;
+  width: 400px;
+  margin-bottom: 1.2em;
+}
+
+.step {
+  border: 4px solid #a2a8d3;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: white;
+  transition: all 0.4s;
+}
+
+.step.active {
+  border-color: darkblue;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.left--button,
+.right--button {
+  margin: 0.3em;
+  border-radius: 10px;
+  color: white;
+  background-color: #142d4c;
+}
